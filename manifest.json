@@ -1,0 +1,29 @@
+{
+  "name": "Virus Shenanigans",
+  "manifest_version" : 2,
+  "version": "1.2.0",
+  "description": "Trying to make the coronavirus a little bit more silly",
+  "page_action": {
+    "default_icon": "virus_icon_16.png"
+  },
+  "icons": {
+    "16" : "virus_icon_16.png",
+    "48" : "virus_icon_48.png",
+    "128" : "virus_icon_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+  {
+    "matches" : ["http://*/*", "https://*/*"],
+    "js" : ["utils/jquery.js", "main/virus.js"]
+  }
+  ],
+  "web_accessible_resources": [
+    "images/*.png"
+  ]
+}
